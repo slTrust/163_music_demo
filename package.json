@@ -1,0 +1,22 @@
+{
+  "name": "163music",
+  "version": "1.0.0",
+  "description": "\"# 163_music_demo\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slTrust/163_music_demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slTrust/163_music_demo/issues"
+  },
+  "homepage": "https://github.com/slTrust/163_music_demo#readme",
+  "dependencies": {
+    "leancloud-storage": "^3.7.2"
+  }
+}
