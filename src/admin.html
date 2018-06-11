@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员页面</title>
+</head>
+
+<body>
+    <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
+    <script>
+        var APP_ID = 'W9s0m71KFO647qIz3LzRYDm8-gzGzoHsz';
+        var APP_KEY = 'X5tYc29KIXc97Ud8fqB3jxwi';
+        AV.init({
+            appId: APP_ID,
+            appKey: APP_KEY
+        });
+        var TestObject = AV.Object.extend('Playlist');
+        // 创建一条记录
+        var testObject = new TestObject();
+        // 保存记录
+        testObject.save({
+            name: 'test',
+            cover: 'test', //背景图
+            creatorId: 'test', //创建者
+            description: 'test',//歌曲描述
+            songs: ["1", "2", "3"],  //歌曲列表
+        }).then(function (object) {
+            alert('LeanCloud Rocks!');
+        })
+    </script>
+</body>
+
+</html>
