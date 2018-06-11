@@ -20,5 +20,8 @@
     "leancloud-storage": "^3.7.2",
     "qiniu-js": "^1.0.22",
     "plupload": "^2.3.2"
+  },
+  "devDependencies": {
+    "qiniu": "^7.1.7"
   }
 }
