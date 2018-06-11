@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/slTrust/163_music_demo#readme",
   "dependencies": {
-    "leancloud-storage": "^3.7.2"
+    "leancloud-storage": "^3.7.2",
+    "qiniu-js": "^1.0.22",
+    "plupload": "^2.3.2"
   }
 }
