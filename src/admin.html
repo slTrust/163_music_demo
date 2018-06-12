@@ -5,26 +5,64 @@
     <meta charset="UTF-8">
     <title>管理员页面</title>
     <style>
-        *{margin:0;padding:0;}
-        #yyy{
-            padding:50px 80px;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #yyy {
+            padding: 50px 80px;
             border-radius: 20px;
-            border:2px dashed #ddd;
+            border: 2px dashed #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
-            width:200px;
+            width: 200px;
             flex-direction: column;
         }
     </style>
 </head>
 
 <body>
-    <div id="yyy">
-        <span id="xxx">点击或拖拽文件</span>
-        <p>文件大小不能超过40MB</p>
+    <div class="page">
+        <aside>
+            <div>新建歌曲</div>
+            <ul>
+                <li></li>
+            </ul>
+            <div>
+                <div id="yyy">
+                    <span id="xxx">点击或拖拽文件</span>
+                    <p>文件大小不能超过40MB</p>
+                </div>
+                <div id="uploadStatus"></div>
+            </div>
+        </aside>
+        <main>
+            <form action="">
+                <div class="row">
+                    <label>歌名
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="row">
+                    <label>歌手
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="row">
+                    <label>外链
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="row">
+                    <button type="submit">保存</button>
+                </div>
+
+            </form>
+        </main>
     </div>
-    <div id="uploadStatus"></div>
+
     <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
     <script>
         var APP_ID = 'W9s0m71KFO647qIz3LzRYDm8-gzGzoHsz';
@@ -87,7 +125,7 @@
                     // res.key 是文件名  但是是中文
                     //var sourceLink = domain + res.key; // 获取上传成功后的文件的Url
                     var sourceLink = `http://${domain}/${encodeURIComponent(res.key)}`;
-                    uploadStatus.textContent = sourceLink +','+res.key;
+                    uploadStatus.textContent = sourceLink + ',' + res.key;
                 },
                 'Error': function (up, err, errTip) {
                     //上传出错时,处理相关的事情
