@@ -47,3 +47,13 @@ response.end()
 ```
 ./qiniu-config.json
 ```
+
+#### 1.x版本的七牛并没有说需要moxie.js
+
+```
+我的是 moxie.js版本是1.5.6 请在 qiniu.js之前引用
+我的是 moxie.js版本是1.5.6 请在 qiniu.js之前引用
+我的是 moxie.js版本是1.5.6 请在 qiniu.js之前引用
+```
+
+> 这样我们就可以在本地开一个node server.js 8888的服务来返回token实现七牛上传了
